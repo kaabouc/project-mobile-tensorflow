@@ -23,6 +23,10 @@
         android:layout_marginTop="40dp"
         android:layout_below="@+id/title"
        android:layout_centerHorizontal="true" />
+    <SurfaceView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/selectBtn"

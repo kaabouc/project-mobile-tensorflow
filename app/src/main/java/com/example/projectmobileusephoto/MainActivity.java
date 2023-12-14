@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,8 +31,19 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
+import org.opencv.android.OpenCVLoader;
 
 public class MainActivity extends AppCompatActivity {
+    static {
+        OpenCVLoader.initDebug();
+    }
+//    static {
+//        if (!OpenCVLoader.initDebug()) {
+//            Log.e("OpenCV", "OpenCV initialization failed.");
+//        } else {
+//            Log.d("OpenCV", "OpenCV initialization succeeded.");
+//        }
+//    }
     Button select,predict,capture;
     TextView result;
     Bitmap bitmap;
